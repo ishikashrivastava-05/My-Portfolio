@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+   
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-left: 10px;
+}
+
+.logo{
+    color: antiquewhite;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left:75px ;
+}
+.logo span{
+    color: hwb(180 5% 15%);
+   
+}
+.hamburg
+.cancel{
+  cursor: pointer;
+  /* position: absolute; */
+  right: 15px;
+  top: 10px;
+  color: rgb(52, 6, 6);
+  /* display: block; */
+  font-size: 40px;  
+}
+ .links{
+    display: flex;
+}
+ .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: aliceblue;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+ .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color:  hwb(180 4% 34%);
+transition: 0.2s linear;}
+.links a:hover{
+    color:  hwb(180 0% 0%);
+}
+.dropdown{
+    z-index: 100;
+    position:absolute;
+    top: 0;
+    transform: translateY(0px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px rgb(196, 188, 188);
+    transition: 0.2s inherit;
+    display: none;
+}
+.dropdown .links a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    transition: 0.2s linear;
+    align-items: center;
+    padding: 15px 0;
+}
+.dropdown .links a:hover{
+    background-color: hwb(180 0% 0%);
+}
+.image{
+    width: 330px ;
+   height: 80vh;
+   overflow: hidden;
+   box-shadow: 0 0 20px hwb(197 22% 4%);
+   border-radius:50px 30px 50px 30px; 
+   margin-top: 15%;
+ 
+   padding-right:45px;
+}
+section{
+    width: 100%;
+    height: 50%;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out;
+}
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1.05; 
+    }
+}
+.content{
+color: white;
+width: 40%;
+min-height: 100px;
+
+}
+  
+h1{
+    font-size: clamp(1rem, 1rem +5vw,1.8rem);
+}
+p{
+    font-size: 2px;
+    color: rgb(201, 206, 210); 
+}
+.content h1 span {
+    color:  hwb(180 12% 13%);
+   
+    font-size: 30px;
+}
+.typewriter-text{
+    color:  hwb(180 12% 13%);
+   
+    font-size: 30px;
+}
+.typewriter{
+font-size: 20px;
+font-weight: 600;
+}
+.typewriter p{
+    font-size: 16px;
+}
+.socio-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+   border-radius: 50%;
+   background-color: transparent;
+   margin: 0.15px;
+  transition: 0.3s linear;
+    border: 0.2rem solid  hwb(180 21% 34%);
+    font-size: 1.5rem;
+}
+.socio-links i:hover{
+    scale: 1.3;
+    color: rgb(243, 236, 236);
+    background-color:  hwb(180 7% 89%);
+    filter:drop-shadow(0 0 10px  hwb(180 0% 0%));
+}
+@media (max-width:884px){
+    .logo{
+        position: absolute;
+        top:16px;
+        left:15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+      display: none;
+    }
+    .hamburg .cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .socio-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 60%;
+    }
+    .main-container .image{
+        z-index: -1;
+        width: 70%;
+        height: 60%;
+    }
+}
+@media(max-width:440px) {
+    .main-container .image{
+        width: 50%;
+        height: 40%;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    
+    
+}
+.skil{
+    background-color: rgb(22, 199, 199);
+    border-radius: 10px;
+    padding-left: 11%;
+    width: 70%;
+    height: 60px;
+    margin-left: 13%;
+    margin-top: 50px;
+}
+.main{
+    
+}
+
+  
